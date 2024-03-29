@@ -108,13 +108,8 @@
                     "meta.embedded.block.svg": "xml"
                 }
             }
-        ],
-        "typescriptServerPlugins": [
-            {
-                "name": "typescript-dart-inline-html-plugin",
-                "enableForWorkspaceTypeScriptVersions": true
-            }
-        ],
+        ]
+        ,
         "jsonValidation": [
             {
                 "fileMatch": "jsconfig*.json",
