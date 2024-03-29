@@ -13,7 +13,7 @@
                             "properties": {
                                 "name": {
                                     "enum": [
-                                        "typescript-lit-html-plugin"
+                                        "typescript-dart-inline-html-plugin"
                                     ]
                                 }
                             },

@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 
-const typeScriptExtensionId = 'vscode.typescript-language-features';
-const pluginId = 'typescript-lit-html-plugin';
-const configurationSection = 'lit-html';
+const dartExtensionId = 'Dart-Code.dart-code';
+const pluginId = 'Dart-Code.inline-html';
+const configurationSection = 'dart-inline-html';
 
 interface SynchronizedConfiguration {
     tags?: ReadonlyArray<string>;
@@ -12,7 +12,7 @@ interface SynchronizedConfiguration {
 }
 
 export async function activate(context: vscode.ExtensionContext) {
-    const extension = vscode.extensions.getExtension(typeScriptExtensionId);
+    const extension = vscode.extensions.getExtension(dartExtensionId);
     if (!extension) {
         return;
     }

@@ -1,7 +1,7 @@
 {
-    "name": "lit-html",
+    "name": "dart-inline-html",
     "private": true,
-    "displayName": "lit-html",
+    "displayName": "dart-inline-html",
     "description": "Syntax highlighting and IntelliSense for html inside of JavaScript and TypeScript tagged template strings",
     "version": "1.11.1",
     "publisher": "bierner",
@@ -12,18 +12,18 @@
         "theme": "light"
     },
     "repository": {
-        "url": "https://github.com/mjbvz/vscode-lit-html.git"
+        "url": "https://github.com/mjbvz/vscode-dart-inline-html.git"
     },
     "bugs": {
-        "url": "https://github.com/mjbvz/vscode-lit-html/issues"
+        "url": "https://github.com/mjbvz/vscode-dart-inline-html/issues"
     },
     "categories": [
         "Programming Languages"
     ],
     "keywords": [
-        "lit-html",
-        "javascript",
-        "typescript",
+        "dart-inline-html",
+        "dart",
+        "flutter",
         "html",
         "template"
     ],
@@ -31,19 +31,17 @@
         "vscode": "^1.29.0"
     },
     "activationEvents": [
-        "onLanguage:javascript",
-        "onLanguage:javascriptreact",
-        "onLanguage:typescript",
-        "onLanguage:typescriptreact"
+        "onLanguage:dart",
+        "onLanguage:flutter"
     ],
     "main": "./out/index.js",
     "contributes": {
         "configuration": [
             {
-                "id": "lit-html",
-                "title": "Lit HTML",
+                "id": "dart-inline-html",
+                "title": "Dart Inline HTML",
                 "properties": {
-                    "lit-html.tags": {
+                    "dart-inline-html.tags": {
                         "type": "array",
                         "description": "List of template tags to enable html intellisense in.",
                         "items": {
@@ -55,7 +53,7 @@
                             "raw"
                         ]
                     },
-                    "lit-html.format.enabled": {
+                    "dart-inline-html.format.enabled": {
                         "type": "boolean",
                         "description": "Enable/disable formatting of html template strings.",
                         "default": true
@@ -66,15 +64,11 @@
         "grammars": [
             {
                 "injectTo": [
-                    "source.js",
-                    "source.js.jsx",
-                    "source.jsx",
-                    "source.ts",
-                    "source.tsx",
+                    "source.dart",
                     "text.html.basic"
                 ],
-                "scopeName": "inline.lit-html",
-                "path": "./syntaxes/lit-html.json",
+                "scopeName": "inline.dart-inline-html",
+                "path": "./syntaxes/dart-inline-html.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.html": "html",
                     "meta.embedded.block.css": "css",
@@ -83,45 +77,33 @@
             },
             {
                 "injectTo": [
-                    "source.js",
-                    "source.js.jsx",
-                    "source.jsx",
-                    "source.ts",
-                    "source.tsx",
+                    "source.dart",
                     "text.html.basic"
                 ],
-                "scopeName": "inline.lit-html.string.injection",
-                "path": "./syntaxes/lit-html-string-injection.json",
+                "scopeName": "inline.dart-inline-html.string.injection",
+                "path": "./syntaxes/dart-inline-html-string-injection.json",
                 "embeddedLanguages": {
                     "meta.template.expression.ts": "typescript"
                 }
             },
             {
                 "injectTo": [
-                    "source.js",
-                    "source.js.jsx",
-                    "source.jsx",
-                    "source.ts",
-                    "source.tsx",
+                    "source.dart",
                     "text.html.basic"
                 ],
-                "scopeName": "inline.lit-html.style.injection",
-                "path": "./syntaxes/lit-html-style-injection.json",
+                "scopeName": "inline.dart-inline-html.style.injection",
+                "path": "./syntaxes/dart-inline-html-style-injection.json",
                 "embeddedLanguages": {
                     "meta.template.expression.ts": "typescript"
                 }
             },
             {
                 "injectTo": [
-                    "source.js",
-                    "source.js.jsx",
-                    "source.jsx",
-                    "source.ts",
-                    "source.tsx",
+                    "source.dart",
                     "text.html.basic"
                 ],
-                "scopeName": "inline.lit-html-svg",
-                "path": "./syntaxes/lit-html-svg.json",
+                "scopeName": "inline.dart-inline-html-svg",
+                "path": "./syntaxes/dart-inline-html-svg.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.svg": "xml"
                 }
@@ -129,7 +111,7 @@
         ],
         "typescriptServerPlugins": [
             {
-                "name": "typescript-lit-html-plugin",
+                "name": "typescript-dart-inline-html-plugin",
                 "enableForWorkspaceTypeScriptVersions": true
             }
         ],
@@ -151,7 +133,6 @@
         "test": "node ./out/test"
     },
     "dependencies": {
-        "typescript-lit-html-plugin": "0.9.0"
     },
     "devDependencies": {
         "@types/node": "^12.7.5",
